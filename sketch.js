@@ -8,7 +8,10 @@ var tree, stone,ground, launcherObject;
 var mango1,mango2,mango3,mango4,mango5;
 var boy,boyImg;
 
-
+function preload()
+{
+	boyImg = loadImage("Plucking_mangoes/boy.png");
+}
 
 function setup() {
 	createCanvas(1350, 600);
@@ -18,7 +21,9 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	
+	boy = createSprite(200,550);
+	boy.addImage(boyImg);
+	boy.scale = 0.1;
 	tree = new Tree(900,350,30,300);
 	ground = new Ground(600,600,2000,20);
 	mango1 = new Mango(900,250,15);

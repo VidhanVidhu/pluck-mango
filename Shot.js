@@ -7,7 +7,6 @@ class Shot{
             length: 3
         }
         this.pointB = pointB;
-        this.shot=loadImage("sprites/boy.png")
         this.shot = Constraint.create(options);
         World.add(world, this.shot);
     }
@@ -22,8 +21,8 @@ class Shot{
         if(this.shot.bodyA){
         var pointA = this.shot.bodyA.position;
         var pointB = this.pointB;
-        strokeWeight(4);
-        line(pointA.x, pointA.y, pointB.x, pointB.y);
+        //strokeWeight(4);
+        //line(pointA.x, pointA.y, pointB.x, pointB.y);
         }
     }
 }
